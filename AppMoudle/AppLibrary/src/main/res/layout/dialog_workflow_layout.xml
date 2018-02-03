@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:padding="25dip"
+     >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="30dip"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/normalDialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/dialog_border_top"
+            android:text="标题"
+            android:gravity="center"
+            android:textColor="@color/gray_deep"
+            android:visibility="visible" />
+
+
+
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/write"
+            android:gravity="center" >
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp">
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/current_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        android:text="当前审批人"/>
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_small"></View>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/current_person_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:text="李元"/>
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_small"></View>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textColor="@color/textcolor"
+                        android:textSize="16sp"
+                        android:text="备注"/>
+                </TableRow>
+
+                <TableRow>
+                    <EditText
+                        android:id="@+id/note_value"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dialog_border"
+                        android:padding="10dp"
+                        android:lines="4"
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:gravity="top"
+                        android:hint="请输入相关描述"/>
+                </TableRow>
+
+            </TableLayout>
+
+            <!--<TextView
+                android:id="@+id/message"
+                style="@style/text_16_666666"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:lineSpacingMultiplier="1.5"
+                android:minHeight="120.0dip"
+                android:paddingBottom="15.0dip"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip"
+                android:paddingTop="15.0dip"
+                android:background="@color/white"/>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sd"
+            android:layout_below="@+id/save_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dailog_border_bottom"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            >
+
+            <LinearLayout
+                android:id="@+id/positiveButton"
+                android:orientation="horizontal"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/workflow_border_save"
+                android:visibility="gone"
+                >
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/negativeButton"
+                android:orientation="horizontal"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="@drawable/workflow_border_delete"
+                >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/steelblue"
+                    android:text="删除"
+                    android:padding="6dp"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cancelButton"
+                android:orientation="horizontal"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/workflow_border_delete"
+
+                >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cornflowerblue"
+                    android:text="取消"
+                    android:padding="6dp"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cancle_top"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="-15dip"
+            android:clickable="true"
+            android:src="@drawable/dialog_close"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/linearLayout"
+            android:layout_alignStart="@+id/linearLayout"
+            android:layout_marginBottom="49dp"
+            android:padding="6dp"
+            android:text="保存"
+            android:textColor="@color/ivory"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
