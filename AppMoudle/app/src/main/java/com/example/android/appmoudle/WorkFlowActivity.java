@@ -21,6 +21,7 @@ import com.example.mylibrary.workflow.viewModel.WorkFlowViewModel;
  */
 public class WorkFlowActivity extends LifecycleActivity {
     private WorkFlowViewModel workFlowViewModel;
+    String url;
 
     //启动流程
 //    @Bind(R.id.button1)
@@ -52,7 +53,7 @@ public class WorkFlowActivity extends LifecycleActivity {
     View.OnClickListener button1OnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            workFlowViewModel.getWorkFlowLiveData(WorkFlowActivity.this,"","","","").observe(WorkFlowActivity.this, new Observer<WorkFlowInitResult>() {
+            workFlowViewModel.getWorkFlowLiveData(WorkFlowActivity.this,"","","","",url).observe(WorkFlowActivity.this, new Observer<WorkFlowInitResult>() {
                 @Override
                 public void onChanged(WorkFlowInitResult workFlowInitResult) {
                     Toast.makeText(WorkFlowActivity.this, workFlowInitResult.getMsg() + "==" + workFlowInitResult.getPrid(), Toast.LENGTH_LONG).show();
@@ -64,7 +65,7 @@ public class WorkFlowActivity extends LifecycleActivity {
     View.OnClickListener button2OnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            workFlowViewModel.getWorkFlowDoLiveData(WorkFlowActivity.this,"","","","","","").observe(WorkFlowActivity.this, new Observer<WorkFlowDoResult>() {
+            workFlowViewModel.getWorkFlowDoLiveData(WorkFlowActivity.this,"","","","","","",url).observe(WorkFlowActivity.this, new Observer<WorkFlowDoResult>() {
                 @Override
                 public void onChanged(WorkFlowDoResult workFlowDoResult) {
                     Toast.makeText(WorkFlowActivity.this, workFlowDoResult.getErrorMsg() + "==" + workFlowDoResult.getErrorNo() + "==" + workFlowDoResult.getPRID(), Toast.LENGTH_LONG);
