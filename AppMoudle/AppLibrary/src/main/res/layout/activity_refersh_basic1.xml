@@ -21,11 +21,14 @@
         app:srlPrimaryColor="@color/blue_shallow"
         app:srlAccentColor="@android:color/white"
         >
-        <ezy.ui.layout.LoadingLayout
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!--<ezy.ui.layout.LoadingLayout
             android:id="@+id/loading"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/white">
+            android:background="@android:color/white">-->
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
@@ -33,11 +36,15 @@
             android:overScrollMode="never"
             tools:listitem="@android:layout/simple_list_item_2"
             android:background="#fff" />
-        </ezy.ui.layout.LoadingLayout>
+            <include layout="@layout/_loading_layout_empty"
+                android:id="@+id/empty"/>
+        </FrameLayout>
+        <!--</ezy.ui.layout.LoadingLayout>-->
         <!--<com.scwang.smartrefresh.layout.footer.ClassicsFooter
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srlClassicsSpinnerStyle="Translate"/>-->
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
 
 </LinearLayout>

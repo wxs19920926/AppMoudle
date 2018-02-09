@@ -8,6 +8,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mylibrary.R;
@@ -22,6 +25,8 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Locale;
 
+import ezy.ui.layout.LoadingLayout;
+
 import static android.R.layout.simple_list_item_2;
 
 /**
@@ -33,6 +38,7 @@ public class RefershActivity extends LifecycleActivity {
     RecyclerView recyclerview;
     Toolbar toolbar;
     private BaseRecyclerAdapter<Void> mAdapter;
+    LoadingLayout loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +52,13 @@ public class RefershActivity extends LifecycleActivity {
         refreshLayout = (SmartRefreshLayout) findViewById(R.id.refreshLayout);
         recyclerview = (RecyclerView) findViewById(R.id.recyclerview);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        loading = (LoadingLayout) findViewById(R.id.loading);
     }
 
     public void initView() {
+        loading.setEmptyImage(R.drawable.ic_empty);
+        loading.showEmpty();
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +69,7 @@ public class RefershActivity extends LifecycleActivity {
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
         recyclerview.setItemAnimator(new DefaultItemAnimator());
         recyclerview.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
-        recyclerview.setAdapter(mAdapter = new BaseRecyclerAdapter(initData(),simple_list_item_2) {
+        recyclerview.setAdapter(mAdapter = new BaseRecyclerAdapter(simple_list_item_2) {
             @Override
             protected void onBindViewHolder(SmartViewHolder holder, Object model, int position) {
                 holder.text(android.R.id.text1, String.format(Locale.CHINA, "第%02d条数据", position));
@@ -77,6 +87,8 @@ public class RefershActivity extends LifecycleActivity {
                         mAdapter.refresh(initData());
                         refreshLayout.finishRefresh();
                         refreshLayout.setNoMoreData(false);
+//                        empty.setVisibility(View.GONE);
+                        loading.showContent();
                     }
                 }, 2000);
             }
