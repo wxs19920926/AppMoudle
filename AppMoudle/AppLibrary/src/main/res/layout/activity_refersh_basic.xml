@@ -9,6 +9,7 @@
 
     <android.support.v7.widget.Toolbar style="@style/AppTheme.Toolbar"
         android:id="@+id/toolbar"
+        app:titleTextColor="@color/write"
         app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
         app:title="@string/title_activity_refersh_basic"/>
 

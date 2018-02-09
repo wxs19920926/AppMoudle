@@ -29,11 +29,12 @@
         <item name="android:windowBackground">@android:color/transparent</item><!--除去背景色-->
     </style>
 
-    <style name="AppTheme.Toolbar" parent="@style/Widget.AppCompat.ActionBar">
+    <style name="AppTheme.Toolbar" parent="AppTheme.Toolbar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?attr/actionBarSize</item>
         <item name="android:background">@color/blue_shallow</item>
         <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="actionMenuTextColor">@color/write</item>
     </style>
 
     <!--<style name="LoadingLayoutStyle" parent="LoadingLayout.Style">
