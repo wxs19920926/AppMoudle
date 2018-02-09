@@ -4,8 +4,10 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="write">#FFFFFF</color>
+    <color name="colorDivision">#33aaaaaa</color>
 
     <color name="background">#0072C6</color>
+    <color name="gray_small_double">#FCFCFC</color><!-- 小灰色 -->
     <color name="gray_small">#CCCCCC</color><!-- 小灰色 -->
     <color name="gray_midle">#AAAAAA</color><!-- 中灰色 -->
     <color name="gray_deep">#707070</color><!-- 深灰色 -->

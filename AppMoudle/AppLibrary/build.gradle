@@ -38,6 +38,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 
+    compile 'com.android.support:design:25.3.1'
+
     //如果使用Lifecycle,LiveData、ViewModel
     compile 'android.arch.lifecycle:runtime:1.0.0-alpha1'
     compile 'android.arch.lifecycle:extensions:1.0.0-alpha1'
@@ -57,4 +59,14 @@ dependencies {
 
     compile files('libs/ksoap2-android-assembly-3.4.0-jar-with-dependencies.jar')
     compile files('libs/fastjson-1.1.37.jar')
+
+    //1.0.5 为 1.0.4 与 1.1.0 的过度版，其中API改动过大，老用户升级需谨慎
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'//没有使用特殊Header，可以不加这行
+    compile 'com.android.support:appcompat-v7:25.3.1'//版本随意（必须）
+
+    //检查内存泄漏
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
 }

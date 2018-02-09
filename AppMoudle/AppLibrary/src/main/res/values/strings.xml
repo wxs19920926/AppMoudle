@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">My Library</string>
+    <string name="title_activity_index_main">首页</string>
+    <string name="title_activity_refersh_basic">刷新</string>
+
+
+    <string name="title_style">样式</string>
+    <string name="title_using">使用</string>
+    <string name="title_practice">实战</string>
 </resources>
