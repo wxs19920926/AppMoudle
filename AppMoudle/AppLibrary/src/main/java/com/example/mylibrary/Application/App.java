@@ -3,6 +3,8 @@ package com.example.mylibrary.Application;
 import android.app.Application;
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 import android.support.v7.app.AppCompatDelegate;
 
 import com.example.mylibrary.R;
@@ -23,7 +25,7 @@ import com.squareup.leakcanary.LeakCanary;
  * Created by SCWANG on 2017/6/11.
  */
 
-public class App extends Application {
+public class App extends MultiDexApplication {
 
     //static 代码段可以防止内存泄露
     static {
@@ -48,6 +50,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        MultiDex.install(this);
         if (LeakCanary.isInAnalyzerProcess(this)) {
             // This process is dedicated to LeakCanary for heap analysis.
             // You should not init your app in this process.
