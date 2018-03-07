@@ -11,9 +11,12 @@ import android.widget.Toast;
 
 import com.example.mylibrary.indexMain.activity.IndexMainActivity;
 import com.example.mylibrary.refresh.RefershActivity;
+import com.example.mylibrary.util.DateTimePickerDialog;
 import com.example.mylibrary.workflow.model.WorkFlowDoResult;
 import com.example.mylibrary.workflow.model.WorkFlowInitResult;
 import com.example.mylibrary.workflow.viewModel.WorkFlowViewModel;
+
+import java.util.ArrayList;
 
 
 //import butterknife.Bind;
@@ -25,6 +28,7 @@ import com.example.mylibrary.workflow.viewModel.WorkFlowViewModel;
 public class WorkFlowActivity extends LifecycleActivity {
     private WorkFlowViewModel workFlowViewModel;
     String url;
+    ArrayList<String> array1 = new ArrayList<String>();
 
     //启动流程
 //    @Bind(R.id.button1)
@@ -36,6 +40,8 @@ public class WorkFlowActivity extends LifecycleActivity {
     Button button3;
 
     Button button4;
+
+    Button button5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,15 +57,35 @@ public class WorkFlowActivity extends LifecycleActivity {
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
         button4 = (Button) findViewById(R.id.button4);
+        button5 = (Button) findViewById(R.id.button5);
     }
 
     public void initView() {
+        array1 = new ArrayList<String>();
+        array1.add("运行");
+        array1.add("备用");
+        array1.add("检修");
+        array1.add("停用");
         workFlowViewModel = ViewModelProviders.of(this).get(WorkFlowViewModel.class);
         button1.setOnClickListener(button1OnClickListener);
         button2.setOnClickListener(button2OnClickListener);
         button3.setOnClickListener(button3OnClickListener);
         button4.setOnClickListener(button4OnClickListener);
+        button5.setOnClickListener(button5OnClickListener);
     }
+
+    private View.OnClickListener button5OnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            DateTimePickerDialog dialog = new DateTimePickerDialog(WorkFlowActivity.this, array1, "测试");
+            dialog.setOnSelectTimeSetListener(new DateTimePickerDialog.OnSelectSetListener<String>() {
+                @Override
+                public void OnSelectSet(String select) {
+//                    ASSETSTATUS.setText(select);
+                }
+            });
+        }
+    };
 
     private View.OnClickListener button4OnClickListener = new View.OnClickListener() {
         @Override
