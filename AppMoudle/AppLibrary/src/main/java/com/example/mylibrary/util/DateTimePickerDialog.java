@@ -150,7 +150,7 @@ public class DateTimePickerDialog<E> extends Dialog {
             LayoutInflater inflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             // instantiate the dialog with the custom Theme
-            final DateTimePickerDialog dialog = new DateTimePickerDialog(context, R.style.Dialog);
+            final DateTimePickerDialog dialog = new DateTimePickerDialog(context, R.style.myDialogTheme);
             final View layout = inflater.inflate(R.layout.activity_status, null);
             dialog.addContentView(layout, new LayoutParams(
                     LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
