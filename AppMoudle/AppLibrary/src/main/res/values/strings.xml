@@ -7,4 +7,7 @@
     <string name="title_style">样式</string>
     <string name="title_using">使用</string>
     <string name="title_practice">实战</string>
+
+    <string name="action_save">保存</string>
+    <string name="action_add">新增</string>
 </resources>

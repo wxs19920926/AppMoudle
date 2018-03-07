@@ -14,6 +14,8 @@
         <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back_white_24dp</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="android:textColorSecondary">@color/write</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
      <!--   <item name="android:textColorPrimary">@android:color/white</item>-->
         <!--<item name="styleLoadingLayout">@style/LoadingLayoutStyle</item>-->
     </style>

@@ -1,23 +1,27 @@
 package com.example.mylibrary.indexMain.activity;
 
-import android.annotation.SuppressLint;
 import android.arch.lifecycle.LifecycleActivity;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.menu.MenuBuilder;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.example.mylibrary.R;
 import com.example.mylibrary.indexMain.fragment.Fragment1;
 import com.example.mylibrary.indexMain.fragment.Fragment2;
 import com.example.mylibrary.indexMain.fragment.Fragment3;
-import com.example.mylibrary.util.StatusBarUtil;
+
+import java.lang.reflect.Method;
 
 /**
  * Created by wxs on 2018/2/8.
@@ -73,6 +77,10 @@ public class IndexMainActivity extends LifecycleActivity implements BottomNaviga
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index_main);
+
+        //设置menu
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.inflateMenu(R.menu.optionsmenu);
 
         final BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
