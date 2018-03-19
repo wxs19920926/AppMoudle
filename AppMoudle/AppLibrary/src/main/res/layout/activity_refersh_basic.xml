@@ -13,7 +13,6 @@
         app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
         app:title="@string/title_activity_refersh_basic"/>
 
-
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"

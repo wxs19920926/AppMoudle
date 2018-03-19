@@ -46,7 +46,9 @@
         <item name="android:textColorSecondary">@android:color/white</item>
         <item name="android:textColorPrimary">@android:color/white</item>
         <item name="colorControlNormal">@android:color/white</item>
+
     </style>
+
 
     <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat.Light">
         <!--<item name="android:colorBackground">#000000</item> 也可以设置背景色以及menu中的其他属性-->
