@@ -11,6 +11,8 @@
         android:id="@+id/toolbar"
         app:titleTextColor="@color/write"
         app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+        app:popupTheme="@style/ToolbarPopupTheme"
+        app:theme="@style/ToolbarTheme"
         app:title="@string/title_activity_refersh_basic"/>
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
