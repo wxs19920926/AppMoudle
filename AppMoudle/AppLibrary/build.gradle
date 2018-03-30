@@ -71,5 +71,6 @@ dependencies {
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
 
+
     compile 'com.android.support:multidex:1.0.1'
 }

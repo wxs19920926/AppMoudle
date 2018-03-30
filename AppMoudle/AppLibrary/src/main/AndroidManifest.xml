@@ -15,6 +15,10 @@
             android:name=".refresh.RefershActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".hover.HoverActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

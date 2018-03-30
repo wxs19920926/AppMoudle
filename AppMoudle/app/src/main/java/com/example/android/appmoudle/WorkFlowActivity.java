@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.mylibrary.hover.HoverActivity;
 import com.example.mylibrary.indexMain.activity.IndexMainActivity;
 import com.example.mylibrary.refresh.RefershActivity;
 import com.example.mylibrary.util.DateTimePickerDialog;
@@ -43,6 +44,8 @@ public class WorkFlowActivity extends LifecycleActivity {
 
     Button button5;
 
+    Button button6;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +61,7 @@ public class WorkFlowActivity extends LifecycleActivity {
         button3 = (Button) findViewById(R.id.button3);
         button4 = (Button) findViewById(R.id.button4);
         button5 = (Button) findViewById(R.id.button5);
+        button6 = (Button) findViewById(R.id.button6);
     }
 
     public void initView() {
@@ -72,7 +76,16 @@ public class WorkFlowActivity extends LifecycleActivity {
         button3.setOnClickListener(button3OnClickListener);
         button4.setOnClickListener(button4OnClickListener);
         button5.setOnClickListener(button5OnClickListener);
+        button6.setOnClickListener(button6OnClickListener);
     }
+
+    private View.OnClickListener button6OnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(WorkFlowActivity.this, HoverActivity.class);
+            startActivity(intent);
+        }
+    };
 
     private View.OnClickListener button5OnClickListener = new View.OnClickListener() {
         @Override

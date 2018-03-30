@@ -7,6 +7,11 @@
     <color name="colorDivision">#33aaaaaa</color>
     <color name="viewfinder_mask">#60000000</color>
 
+    <!--筛选框-->
+    <color name="stand_bg">#fff6f6f6</color>
+    <color name="font_black_6">#ff666666</color>
+    <color name="font_black_content">#222222</color>
+
     <color name="yunda">#3f93e9</color>
     <color name="background">#0072C6</color>
     <color name="gray_deep_double">#454545</color>
