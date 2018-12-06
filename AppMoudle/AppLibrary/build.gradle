@@ -41,16 +41,16 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
 
     //如果使用Lifecycle,LiveData、ViewModel
-    compile 'android.arch.lifecycle:runtime:1.0.0-alpha1'
-    compile 'android.arch.lifecycle:extensions:1.0.0-alpha1'
-    annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha1"
+    compile 'android.arch.lifecycle:runtime:1.0.0'
+    compile 'android.arch.lifecycle:extensions:1.0.0'
+    annotationProcessor "android.arch.lifecycle:compiler:1.0.0"
 
     //如果使用Room（可以理解为为了持久化数据）
-    compile 'android.arch.persistence.room:runtime:1.0.0-alpha1'
-    annotationProcessor "android.arch.persistence.room:compiler:1.0.0-alpha1"
+    compile 'android.arch.persistence.room:runtime:1.0.0'
+    annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
 
     //For Room RxJava support, add:
-    compile 'android.arch.persistence.room:rxjava2:1.0.0-alpha1'
+    compile 'android.arch.persistence.room:rxjava2:1.0.0'
 
     //rajava http
     compile 'io.reactivex.rxjava2:rxjava:2.1.3'
